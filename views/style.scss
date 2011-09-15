@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,600,300italic);
+@import "/css/normalize.css";
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  a {color: navy;}
+}
+
+#content {
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 140px;
+  background: url(/images/background.jpg) top repeat;
+  border-width: 10px;
+  border-style: solid;
+  border-color: navy;
+  
+  article {
+    padding: 1em;
+    h1 { margin: 0px;}
+  }
+}

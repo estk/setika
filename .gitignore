@@ -5,6 +5,7 @@
 *.sqlite3
 log/*
 tmp/*
+.sass-cache/*
 
 ## generic files to ignore
 *~
