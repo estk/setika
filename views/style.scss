@@ -1,13 +1,21 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,600,300italic);
 @import "/css/normalize.css";
 
-html { height: 100%;}
+// vars #440075
+
+$primary: #440075;
+$primary-dark: darken($primary, 10%);
+
+html { height: 100%; }
 body {
   font-family: 'Josefin Sans', sans-serif;
   background: url(/images/wallpaper.jpg) top repeat;
-  border-top: solid 10px navy;
-  border-bottom: solid 10px navy;
-  a {color: navy;}
+  border-top: solid 10px $primary;
+  border-bottom: solid 10px $primary;
+  a {
+  color: $primary;
+  &:visited { color: $primary-dark; }
+  }
 }
 
 #content {
@@ -19,10 +27,27 @@ body {
   background: url(/images/background.jpg) top repeat;
   border-width: 10px;
   border-style: solid;
-  border-color: navy;
-  
-  article {
-    padding: 1em;
-    h1 { margin: 0px;}
+  border-color: $primary;
+}
+
+article {
+  padding: 1em;
+}
+
+header {
+  position:relative;
+  h1 { 
+    margin: 0px;
+    display: inline;
   }
+  #slogan {
+    position: absolute;
+    right: 0px;
+    padding: 0;
+    margin: 6px 0 0 50px;
+    span {
+      margin: 0 5px;
+    }
+  }
+  
 }
