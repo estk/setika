@@ -18,6 +18,11 @@ $main-width: 10px;
   margin-right: auto;
 }
 
+@mixin shadow {
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+}
+
 html { height: 100%; }
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -47,6 +52,7 @@ article {
     img {
       @include border($main-width/2);
       @include center;
+      @include shadow;
     }
   }
 }
