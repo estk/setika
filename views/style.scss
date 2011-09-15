@@ -21,7 +21,7 @@ $main-width: 10px;
 html { height: 100%; }
 body {
   font-family: 'Josefin Sans', sans-serif;
-  background: url(/images/wallpaper.jpg) top repeat;
+  background: #fff url(/images/wallpaper.jpg) top repeat;
   border-top: solid $main-width $primary;
   border-bottom: solid $main-width $primary;
   min-height: 100%;
