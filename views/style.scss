@@ -5,17 +5,15 @@
 
 $primary: #440075;
 $primary-dark: darken($primary, 10%);
+$border-width: 10px;
 
 html { height: 100%; }
 body {
   font-family: 'Josefin Sans', sans-serif;
   background: url(/images/wallpaper.jpg) top repeat;
-  border-top: solid 10px $primary;
-  border-bottom: solid 10px $primary;
-  a {
-  color: $primary;
-  &:visited { color: $primary-dark; }
-  }
+  border-top: solid $border-width $primary;
+  border-bottom: solid $border-width $primary;
+  min-height: 100%;
 }
 
 #content {
@@ -25,13 +23,17 @@ body {
   margin-top: 140px;
   margin-bottom: 140px;
   background: url(/images/background.jpg) top repeat;
-  border-width: 10px;
+  border-width: $border-width;
   border-style: solid;
   border-color: $primary;
 }
 
 article {
   padding: 1em;
+  a {
+    color: $primary;
+    &:visited { color: $primary-dark; }
+    }
 }
 
 header {
@@ -43,11 +45,8 @@ header {
   #slogan {
     position: absolute;
     right: 0px;
-    padding: 0;
-    margin: 6px 0 0 50px;
-    span {
-      margin: 0 5px;
-    }
+    margin-top: 6px;
+    span { margin: 0 5px; }
   }
   
 }
