@@ -5,27 +5,35 @@
 
 $primary: #440075;
 $primary-dark: darken($primary, 10%);
-$border-width: 10px;
+$main-width: 10px;
+
+@mixin border( $width ) {
+  border-width: $width;
+  border-style: solid;
+  border-color: $primary;
+}
+
+@mixin center {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 html { height: 100%; }
 body {
   font-family: 'Josefin Sans', sans-serif;
   background: url(/images/wallpaper.jpg) top repeat;
-  border-top: solid $border-width $primary;
-  border-bottom: solid $border-width $primary;
+  border-top: solid $main-width $primary;
+  border-bottom: solid $main-width $primary;
   min-height: 100%;
 }
 
 #content {
+  @include center;
+  @include border($main-width);
   width: 480px;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 140px;
   margin-bottom: 140px;
   background: url(/images/background.jpg) top repeat;
-  border-width: $border-width;
-  border-style: solid;
-  border-color: $primary;
 }
 
 article {
@@ -34,10 +42,17 @@ article {
     color: $primary;
     &:visited { color: $primary-dark; }
     }
+  #projects {
+    text-align: center;
+    img {
+      @include border($main-width/2);
+      @include center;
+    }
+  }
 }
 
 header {
-  position:relative;
+  position: relative;
   h1 { 
     margin: 0px;
     display: inline;
@@ -49,4 +64,12 @@ header {
     span { margin: 0 5px; }
   }
   
+}
+
+#contact {
+  text-align: center;
+  span {
+    display: inline-block;
+    width: 40%; 
+  }
 }
