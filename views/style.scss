@@ -1,17 +1,24 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300,600,300italic);
 @import "/css/normalize.css";
 
-// vars #440075
+// vars #191970 #440075
 
-$primary: #440075;
+$primary: #6183A6;
 $primary-dark: darken($primary, 10%);
 $main-width: 10px;
 
-@mixin border( $width ) {
-  border-width: $width;
+@mixin border {
+  border-width: $main-width;
   border-style: solid;
   border-color: $primary;
 }
+
+@mixin imgborder {
+  border-width: $main-width/2;
+  border-style: solid;
+  border-color: white;
+}
+  
 
 @mixin center {
   margin-left: auto;
@@ -34,7 +41,7 @@ body {
 
 #content {
   @include center;
-  @include border($main-width);
+  @include border;
   width: 480px;
   margin-top: 140px;
   margin-bottom: 140px;
@@ -50,7 +57,7 @@ article {
   #projects {
     text-align: center;
     img {
-      @include border($main-width/2);
+      @include imgborder;
       @include center;
       @include shadow;
     }
